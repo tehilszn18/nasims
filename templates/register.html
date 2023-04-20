@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+<!-- static -->
+{% load static %}
+<!-- crispy -->
+{% load crispy_forms_tags %}
+
+<!-- hgdfsadfsg -->
+{% block content %}
+<form class="col-10 col-md-7 mx-auto" method="post">
+  <h3 class="mt-4 text-decoration-underline">Register</h3>
+
+  {% csrf_token %}
+  <!-- form -->
+  {{form|crispy}}
+  <button class="btn btn-outline-success mb-4">Register</button>
+</form>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% load static %}
+<style></style>
+<nav
+  class="py-4 px-2 position-fixed top-0 w-100 navbar border-bottom bg-light navbar-expand-lg navbar-light"
+  style="z-index: 1"
+>
+  <a href="" class="navbar-brand d-block d-md-none">LOGO</a>
+  <h5 class="d-none d-md-block">
+    Federal Ministry of Humanitarian Affairs, Disaster <br />Management and
+    Social Development
+  </h5>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navCollapse"
+    aria-controls="navCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navCollapse">
+    <ul
+      class="d-flex navbar-nav align-items-center justify-content-center ms-auto"
+    >
+      {% if not request.user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'core:home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'account:register' %}">Register</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="">News</a></li>
+      <li class="nav-item"><a class="nav-link" href="">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+
+      <li class="nav-item">
+        <a
+          class="btn btn-success py-3"
+          href="{% url 'account:login' %}"
+          style="width: 14rem"
+          >Login</a
+        >
+        {% else %}
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle"
+            type="button"
+            id="dropdownToggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><img
+              class="rounded-circle"
+              src="{{request.user.profile.profile_pics.url}}"
+              width="50"
+              height="50"
+              alt=""
+          /></a>
+
+          <div
+            class="dropdown-menu dropdown-menu-left"
+            style="margin-left: -150px; z-index: 100"
+            aria-labelledby="dropdownToggle"
+          >
+            <a class="dropdown-item" href="{% url 'core:home' %}"
+              >Back to Home</a
+            >
+            <a class="dropdown-item" href="{% url 'account:dashboard' %}"
+              >Back to Dashboard</a
+            >
+            <a class="dropdown-item" href="{% url 'account:logout' %}"
+              >Sign Out</a
+            >
+          </div>
+        </div>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+<!-- <header>
+  <button class="btn btn-success">Login</button>
+</header> -->

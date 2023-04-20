@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+<!-- loadstatic -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- block content -->
+    {% block content %}
+
+    <footer>
+      <div class="bg-dark text-light p-4 text-center">
+        <p>Be the first to know</p>
+        <h2>
+          Follow us on our social media platforms for all the latest updates and
+          applications news
+        </h2>
+        <div>icons</div>
+      </div>
+
+      <!-- footer2 -->
+      <div class="text-center p-4">
+        <h2>Got Questions?</h2>
+        <p>
+          For enquiries, complaints or requests, feel free to reach out to us.
+        </p>
+        <a href=""
+          ><button class="btn btn-success text-light">Contact Us</button></a
+        >
+      </div>
+
+      <!-- footer3 -->
+      <div class="bg-success mt-4 p-4 mx-auto">
+        <div>
+          <ul
+            style="
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+            "
+          >
+            <li>
+              <a
+                class="text-light text-decoration-none"
+                href="{% url 'account:register' %}"
+                >Register</a
+              >
+            </li>
+            <li><a class="text-light text-decoration-none" href="">News</a></li>
+            <li>
+              <a class="text-light text-decoration-none" href="">About</a>
+            </li>
+            <li>
+              <a class="text-light text-decoration-none" href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- copy this one -->
+        <div class="text-light text-center mx-auto">
+          <i class="bi bi-instagram mx-4"> </i>
+          <i class="bi bi-facebook mx-4"></i>
+          <i class="bi bi-whatsapp mx-4"></i>
+        </div>
+        <div class="p-2">
+          <p class="text-light text-center">
+            Copyright 2023. Federal Ministry of Humanitarian Affairs, Disaster
+            Management and Social Development. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- endblock -->
+    {% endblock %}
+  </body>
+</html>

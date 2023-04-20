@@ -1,0 +1,450 @@
+{% extends 'layout.html' %}
+<!-- loadstatic -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nasims Home</title>
+  </head>
+  <body>
+    <!-- block content -->
+    {% block content %}
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      style="margin-top: 100px"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex" style="background-color: white">
+            <div
+              class="d-none d-md-block w-100 py-4"
+              style="padding-left: 100px; padding-right: 100px"
+            >
+              <img
+                src="{% static 'images/nasims-logo.webp' %}"
+                alt=""
+                srcset=""
+                height="150"
+                width="150"
+                class="p-4"
+              />
+              <h4 class="text-decoration-underline">Welcome to the</h4>
+              <h2>
+                National Social <br />Investment Management <br />System
+                (NASIMS) Portal
+              </h2>
+              <p>
+                The National Social Investment Management System(NASIMS)<br />is
+                the central management platform for the administration <br />and
+                coordination of Social Investment Programmes under <br />the
+                Federal Ministry of Humanitarian Affairs. Disaster
+                <br />Management and Social Development
+              </p>
+            </div>
+            <img
+              src="{% static 'images/img.webp' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+
+        <!-- carousel2 -->
+        <div class="carousel-item">
+          <div class="d-flex" style="background-color: white">
+            <div
+              class="d-none d-md-block w-100 py-4"
+              style="padding-left: 100px; padding-right: 100px"
+            >
+              <img
+                src="{% static 'images/nasims-logo.webp' %}"
+                alt=""
+                srcset=""
+                height="150"
+                width="150"
+                class="p-4"
+              />
+              <h4 class="text-decoration-underline">Welcome to the</h4>
+              <h2>
+                National Social <br />Investment Management <br />System
+                (NASIMS) Portal
+              </h2>
+              <p>
+                The National Social Investment Management System(NASIMS)<br />is
+                the central management platform for the administration <br />and
+                coordination of Social Investment Programmes under <br />the
+                Federal Ministry of Humanitarian Affairs. Disaster
+                <br />Management and Social Development
+              </p>
+            </div>
+            <img
+              src="{% static 'images/hero-image2.webp' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+
+        <!-- carousel3 -->
+        <div class="carousel-item">
+          <div class="d-flex" style="background-color: white">
+            <div
+              class="d-none d-md-block w-100 py-4"
+              style="padding-left: 100px; padding-right: 100px"
+            >
+              <img
+                src="{% static 'images/nasims-logo.webp' %}"
+                alt=""
+                srcset=""
+                height="150"
+                width="150"
+                class="p-4"
+              />
+              <h4 class="text-decoration-underline">Welcome to the</h4>
+              <h2>
+                National Social <br />Investment Management <br />System
+                (NASIMS) Portal
+              </h2>
+              <p>
+                The National Social Investment Management System(NASIMS)<br />is
+                the central management platform for the administration <br />and
+                coordination of Social Investment Programmes under <br />the
+                Federal Ministry of Humanitarian Affairs. Disaster
+                <br />Management and Social Development
+              </p>
+            </div>
+            <img
+              src="{% static 'images/hero-image3.webp' %}"
+              class="d-block w-100"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- carousel end -->
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- read more link -->
+    <div class="bg-dark p-2 text-center">
+      <p class="text-light">
+        Read more about our response to the Covid-19 pandemic
+
+        <a href="" class="text-success">here</a>
+      </p>
+    </div>
+    <!-- end -->
+
+    <!-- hero1 -->
+    <div class="d-block d-md-flex py-3">
+      <div class="w-100 text-center">
+        <img src="{% static 'images/Group1.webp' %}" class="w-75" alt="" />
+      </div>
+      <div class="text-center text-md-start w-100 mt-4">
+        <h4 class="mt-4">
+          Welcome to the National Social Investment Management System (NASIMS)
+        </h4>
+        <p class="mt-4">
+          <a href="" class="text-success"
+            >The Federal Ministry of Humanitarian Affairs, Disaster Management
+            and Social Development</a
+          >
+          was established on Wednesday August 21st, 2019 by an Executive
+          pronouncement by the President and Commander in Chief of the Armed
+          Forces of Nigeria, H.E., Muhammadu Buhari GCFR at the inauguration of
+          Ministers for the Federal Republic of Nigeria. Under My leadership as
+          Minister, the Ministry will position itself in light of the prevailing
+          Humanitarian situation in the country through its Vision, Mission and
+          Core values to promote Human dignity and Integration of basic Humane
+          benevolence and compassion in the treatment of all Nigerians.
+        </p>
+        <p class="">
+          Sadiya Umar Farouq <br />
+          Honorable Minister.
+        </p>
+      </div>
+    </div>
+    <!-- end -->
+    <!-- hero2 -->
+    <div class="d-flex flex-md-row flex-column-reverse py-4 mt-4">
+      <div class="w-100 p-4">
+        <h5 class="text-warning">About us</h5>
+        <h4 class="">
+          Providing efficient, effective, and coorinated humanitarian response
+          to Nigerians.
+        </h4>
+        <p class="">
+          The National Social Investment Program of Nigeria is a social welfare
+          initiative created by the Federal government of Nigeria in 2015 under
+          the direction of the National Social Investment Office. The Program
+          was created to ensure a more equitable distribution of resources to
+          vulnerable populations, including children, youth, and women. Under
+          President Muhammadu Buhari the office has created four programs to
+          address poverty and help increase economic development.
+        </p>
+        <button class="btn btn-success">Read More</button>
+      </div>
+      <div class="w-100 text-center">
+        <img src="{% static 'images/about.webp' %}" class="" alt="" />
+      </div>
+    </div>
+    <!-- end -->
+    <div class="text-center" style="background-color: #f2fcf9">
+      <h4>Our Programmes</h4>
+      <br />
+      <p>
+        Our programmes are specifically designed to empower, train and uplift
+        millions of abandoned Nigerians in every part of the country.
+      </p>
+    </div>
+
+    <!-- card carousel -->
+
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex p-4 px-4" style="background-color: #f2fcf9">
+            <div class="card card-body border-light m-2">
+              <img
+                src="{% static 'images/p2.webp' %}"
+                height="200"
+                class="w-100"
+                alt=""
+              />
+              <h4>Government Enterprise and Empowerment Program (GEEP)</h4>
+              <br />
+              <p>
+                The Government Enterprise and Empowerment Program was
+                established to provide financial support and training to
+                businesses and entrepreneurs at the bottom of the financial
+                pyramid.
+              </p>
+              <br />
+
+              <div class="d-flex">
+                <a href=""
+                  ><button class="btn btn-success">Apply now</button></a
+                >
+                <a href=""
+                  ><button class="btn btn-light text-success">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+
+            <!-- card2 -->
+            <div class="card card-body border-light m-2">
+              <img
+                src="{% static 'images/p1.webp' %}"
+                height="200"
+                class="w-100"
+                alt=""
+              />
+              <h4>National Home Grown School Feeding Program (NHGSFP)</h4>
+              <br />
+              <p>
+                The National Home Grown School Feeding Program was created to
+                provide a nutritious and balanced meal to 5.5 million school
+                children grades 1 to 3.
+              </p>
+              <br />
+              <div class="d-flex">
+                <a href=""
+                  ><button class="btn btn-success">Apply now</button></a
+                >
+                <a href=""
+                  ><button class="text-success btn btn-light">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card3 -->
+        <div class="carousel-item">
+          <div class="d-flex">
+            <div class="card card-body border-light m-2">
+              <img
+                src="{% static 'images/p3.webp' %}"
+                height="200"
+                class="w-100"
+                alt=""
+              />
+              <h4>N-POWER</h4>
+              <br />
+              <p>
+                The N-Power Program is built to address the issue of youth
+                unemployment and help increase social development.
+              </p>
+              <br />
+              <div class="d-flex">
+                <a href=""
+                  ><button class="btn btn-success">Apply now</button></a
+                >
+                <a href=""
+                  ><button class="text-success btn btn-light">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+
+            <!-- card4 -->
+            <div class="card card-body border-light m-2">
+              <img
+                src="{% static 'images/p4.webp' %}"
+                height="200"
+                class="w-100"
+                alt=""
+              />
+              <h4>Conditional Cash Transfer(CCT)</h4>
+              <br />
+              <p>
+                Nigeria's Conditional Cash Transfer program provides targeted
+                cash transfers to the most vulnerable households with the
+                long-term goal of lifting millions out of poverty.
+              </p>
+              <br />
+              <div class="d-flex">
+                <a href=""
+                  ><button class="btn btn-success">Apply now</button></a
+                >
+                <a href=""
+                  ><button class="text-success btn btn-light">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- button -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- end carousel -->
+
+    <!-- latest news -->
+    <div class="text-center d-block">
+      <div>
+        <h3><strong>Latest News</strong></h3>
+      </div>
+      <div>
+        <p>Keep up with the latest updates about programmes and events</p>
+      </div>
+    </div>
+    <!-- news -->
+    <div class="d-md-flex p-4 px-4 m-4 d-block">
+      <div class="card card-body shadow-lg">
+        <img src="{% static 'images/f1.webp' %}" alt="" />
+        <p class="mt-4">
+          <strong>N-Power Batch C</strong> <br />June 25, 2020
+          <br />
+          <span
+            >All empower batch c applicants are expected to update their profile
+            and take test for possible shortlisting...</span
+          >
+        </p>
+      </div>
+      <div class="card card-body mx-2 shadow-lg">
+        <img src="{% static 'images/f2.webp' %}" alt="" />
+        <p class="mt-4">
+          <strong>N-Power Customer Care</strong>
+          <br />
+          June 25, 2020
+          <br />
+          All enquires and complains should be channeled through the N-Power
+          customer care line. Details are as follows:
+        </p>
+      </div>
+      <div class="card card-body shadow-lg">
+        <img src="{% static 'images/fr.webp' %}" alt="" />
+        <p class="mt-4">
+          <strong>NASIMS Test Portal</strong>
+          <br />
+          June 25, 2020
+          <br />
+          Please make sure your records are fully updated on the NASIMS portal
+          before taking this test...
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href=""
+        ><button class="btn btn-success text-light">News Page</button></a
+      >
+    </div>
+    {% include 'footer.html' %}
+    <!-- footer -->
+
+    {% endblock %}
+  </body>
+</html>

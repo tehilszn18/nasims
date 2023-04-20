@@ -1,0 +1,142 @@
+{% extends 'layout.html' %}
+
+<!-- block bgnn -->
+{% block content %}
+
+<div class="mt-4">
+  {% for message in messages %}
+  <!-- for loop -->
+  {% if message %}
+  <div class="alert alert-success mx-auto col-10 col-md-5">{{message}}</div>
+  {% endif %}
+  <!-- end of loop -->
+  {% endfor %}
+  <div class="d-flex justify-content-between mx-4">
+    <h3>Personal Details</h3>
+    <a href="{% url 'account:update_profile' request.user.profile.id %}"
+      >Edit</a
+    >
+  </div>
+  <div class="d-flex flex-md-row flex-column-reverse">
+    <div
+      class="card card-body border-bottom mx-md-4 mx-auto mt-2 col-10 col-md-9"
+    >
+      <div>
+        <span>Last Name</span>
+        <h4>{{request.user.last_name}}</h4>
+      </div>
+    </div>
+    <div
+      class="card card-body text-center mt-2 mx-md-4 mx-auto border-bottom col-10 col-md-5"
+    >
+      <!-- card body is important -->
+      <img
+        src="{{request.user.profile.profile_pics.url}}"
+        class="square mx-auto"
+        alt=""
+        height="100"
+        width="100"
+      />
+      <br />
+      <h3>{{request.user.first_name}} {{request.user.last_name}}</h3>
+      <strong class="text-secondary">{{request.user.email}}</strong><br />
+
+      <strong>NPWR/2020/00123456</strong>
+      <br />
+      <p><strong>N-Tech-NPR</strong></p>
+      <h5><span class="badge rounded-pill bg-success">Shortlisted</span></h5>
+      <strong>N-Power Batch A</strong>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div>
+    <h3>Other names</h3>
+    <p>{{request.user.profile.other_names}}</p>
+  </div>
+
+  <div>
+    <h3>First Name</h3>
+    <p>{{request.user.first_name}}</p>
+  </div>
+  <div>
+    <h3>Gender</h3>
+    <p>{{request.user.profile.gender}}</p>
+  </div>
+  <div>
+    <h3>Email</h3>
+    <p>{{request.user.profile.email}}</p>
+  </div>
+  <div>
+    <h3>Phone Number</h3>
+    <p>{{request.user.profile.phone_number}}</p>
+  </div>
+
+  <div>
+    <h3>State of Origin</h3>
+    <p>{{request.user.profile.state_of_origin}}</p>
+  </div>
+
+  <div>
+    <h3>Lga origin</h3>
+    <p>{{request.user.profile.lga_origin}}</p>
+  </div>
+
+  <div>
+    <h3>Scheme Name</h3>
+    <p>{{request.user.profile.scheme_name}}</p>
+  </div>
+
+  <div>
+    <h3>Year of Application</h3>
+    <p>{{request.user.profile.year_of_application}}</p>
+  </div>
+
+  <div>
+    <h3>Residential Address</h3>
+    <p>{{request.user.profile.residential_address}}</p>
+  </div>
+
+  <div>
+    <h3>State of Residence</h3>
+    <p>{{request.user.profile.state_of_residence}}</p>
+  </div>
+
+  <div>
+    <h3>Lga Residence</h3>
+    <p>{{request.user.profile.lga_residence}}</p>
+  </div>
+
+  <div>
+    <h3>Highest level of Education</h3>
+    <p>{{request.user.profile.highest_level_of_education}}</p>
+  </div>
+
+  <div>
+    <h3>Id type</h3>
+    <p>{{request.user.profile.id_type}}</p>
+  </div>
+
+  <div>
+    <h3>BVN</h3>
+    <p>{{request.user.profile.bvn}}</p>
+  </div>
+
+  <div>
+    <h3>Bank Account Number</h3>
+    <p>{{request.user.profile.bank_account_number}}</p>
+  </div>
+
+  <div>
+    <h3>Bank Name</h3>
+    <p>{{request.user.profile.bank_name}}</p>
+  </div>
+
+  <div>
+    <h3>Account Name</h3>
+    <p>{{request.user.profile.account_name}}</p>
+  </div>
+</div>
+
+{% endblock %}
